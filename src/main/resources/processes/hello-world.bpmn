@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL"
+                  xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI"
+                  xmlns:dc="http://www.omg.org/spec/DD/20100524/DC"
+                  xmlns:di="http://www.omg.org/spec/DD/20100524/DI"
+                  xmlns:camunda="http://camunda.org/schema/1.0/bpmn"
+                  id="Definitions_HelloWorld"
+                  targetNamespace="http://bpmn.io/schema/bpmn">
+  <bpmn:process id="hello-world-process" name="Hello World BPMN Engine" isExecutable="true" camunda:historyTimeToLive="180">
+    <bpmn:startEvent id="Start_Hello" name="Start Hello World" />
+    <bpmn:sequenceFlow id="Flow_H1" sourceRef="Start_Hello" targetRef="Task_SayHello" />
+
+    <bpmn:userTask id="Task_SayHello" name="Verifikasi Instalasi BPMN Hello World" />
+    <bpmn:sequenceFlow id="Flow_H2" sourceRef="Task_SayHello" targetRef="End_Hello" />
+
+    <bpmn:endEvent id="End_Hello" name="Hello World Selesai" />
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_Hello">
+    <bpmndi:BPMNPlane id="BPMNPlane_Hello" bpmnElement="hello-world-process">
+      <bpmndi:BPMNShape id="Start_Hello_di" bpmnElement="Start_Hello">
+        <dc:Bounds x="180" y="100" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_SayHello_di" bpmnElement="Task_SayHello">
+        <dc:Bounds x="270" y="78" width="120" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="End_Hello_di" bpmnElement="End_Hello">
+        <dc:Bounds x="450" y="100" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Flow_H1_di" bpmnElement="Flow_H1">
+        <di:waypoint x="216" y="118" />
+        <di:waypoint x="270" y="118" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_H2_di" bpmnElement="Flow_H2">
+        <di:waypoint x="390" y="118" />
+        <di:waypoint x="450" y="118" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>
