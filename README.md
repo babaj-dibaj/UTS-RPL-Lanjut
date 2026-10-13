@@ -5,7 +5,7 @@
 
 ### Informasi Mahasiswa & Mata Kuliah
 * **Nama Mahasiswa:** Siti Dibaj Trikusuma
-* **NIM:** 117
+* **NIM:** 12409011050117
 * **Program Studi:** Teknik Informatika
 * **Fakultas:** Sains dan Teknologi
 * **Perguruan Tinggi:** Universitas Islam Negeri (UIN) Syarif Hidayatullah Jakarta
