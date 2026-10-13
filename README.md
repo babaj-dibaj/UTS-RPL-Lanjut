@@ -186,14 +186,6 @@ Untuk kelengkapan laporan, ambil tangkapan layar secara berurutan:
 5. **Screenshot 5: Tabel Riwayat & SK Terbit (`http://localhost:8080/studi-kasus` - Tab 3)**
    * Menampilkan proposal berstatus selesai dengan nomor SK pembimbing yang telah digenerate.
 
-### B. Skenario Rekaman Video Presentasi Demo (Durasi: 3 - 5 Menit)
-* **Menit 00:00 - 00:45:** Pembukaan salam, identitas mahasiswa (Siti Dibaj Trikusuma, NIM: 117, Prodi Teknik Informatika UIN Jakarta), pengantar tugas UTS RPL Lanjut.
-* **Menit 00:45 - 01:30:** Penjelasan ringkas konsep 5W integrasi Spring Boot dan BPMN 2.0 (tunjukkan halaman `/teori-5w`).
-* **Menit 01:30 - 02:15:** Demo Pengujian Hello World BPMN (buka `/hello-world`, klik trigger, tunjukkan log eksekusi dan selesaikan task).
-* **Menit 02:15 - 04:15:** Demo Studi Kasus Proposal Skripsi (buka `/studi-kasus`, submit form, buka tab inbox verifikasi, klik setujui untuk Sekprodi, Dosen, dan Kaprodi, lalu tunjukkan nomor SK yang terbit di tab riwayat).
-* **Menit 04:15 - 05:00:** Penutup, menunjukkan repositori GitHub, serta ucapan terima kasih kepada Dosen Pengampu Bapak Rizal Broer Bahaweres.
-
----
 
 ## 6. Soal 6: Penggunaan Tools GitHub dan Petunjuk Pengumpulan (Bobot 15%)
 
