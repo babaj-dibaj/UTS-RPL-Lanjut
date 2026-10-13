@@ -10,8 +10,13 @@
 * **Fakultas:** Sains dan Teknologi
 * **Perguruan Tinggi:** Universitas Islam Negeri (UIN) Syarif Hidayatullah Jakarta
 * **Mata Kuliah:** Rekayasa Perangkat Lunak Lanjut (UTS)
-* **Dosen Pengampu:** Rizal Broer Bahaweres, S.Kom., M.Sc., Ph.D. (`rizalbroer@uinjkt.ac.id`)
+* **Dosen Pengampu:** Rizal Broer Bahaweres, S.Kom., M.Sc., Ph.D.
+* **Email Dosen Pengampu:** [`rizalbroer@uinjkt.ac.id`](mailto:rizalbroer@uinjkt.ac.id)
+* **Tautan Repositori GitHub:** [https://github.com/babaj-dibaj/UTS-RPL-Lanjut](https://github.com/babaj-dibaj/UTS-RPL-Lanjut)
 * **Tahun Akademik:** 2024 / 2025
+
+> 📬 **Tugas Ujian Ditujukan Kepada Dosen Pengampu:**
+> **Bapak Rizal Broer Bahaweres, S.Kom., M.Sc., Ph.D.** &mdash; Email: [`rizalbroer@uinjkt.ac.id`](mailto:rizalbroer@uinjkt.ac.id)
 
 ---
 
@@ -209,6 +214,7 @@ git push -u origin main
 
 ### B. Membagikan Repositori ke Dosen Pengampu
 * **Email Dosen Pengampu:** `rizalbroer@uinjkt.ac.id`
+* **Dokumen Laporan Resmi:** Berkas `LAPORAN_UTS_SitiDibaj_117.docx` dan `LAPORAN_UTS.md` telah disertakan langsung di dalam repositori ini.
 * **Jika repositori disetel Private:**
   1. Masuk ke halaman repositori di GitHub.
   2. Buka menu **Settings &rarr; Collaborators &rarr; Add people**.
@@ -216,7 +222,7 @@ git push -u origin main
 * **Kirimkan Email Pengumpulan Tugas:**
   * **Subjek:** UTS RPL Lanjut - Siti Dibaj Trikusuma - NIM 117
   * **Tujuan:** `rizalbroer@uinjkt.ac.id`
-  * **Isi:** Tautan repositori GitHub, tautan video rekaman demo, dan lampiran dokumen laporan/print screen.
+  * **Isi:** Tautan repositori GitHub, tautan video rekaman demo, dan lampiran dokumen laporan `LAPORAN_UTS_SitiDibaj_117.docx`.
 
 ---
 
