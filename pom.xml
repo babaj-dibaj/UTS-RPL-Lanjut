@@ -38,6 +38,19 @@
             <version>7.20.0</version>
         </dependency>
 
+        <!-- Camunda BPM Spring Boot Starter Rest (Provides Jersey REST & Jackson Providers) -->
+        <dependency>
+            <groupId>org.camunda.bpm.springboot</groupId>
+            <artifactId>camunda-bpm-spring-boot-starter-rest</artifactId>
+            <version>7.20.0</version>
+        </dependency>
+
+        <!-- Jersey Media JSON Jackson for Camunda Webapp DTO Serialization -->
+        <dependency>
+            <groupId>org.glassfish.jersey.media</groupId>
+            <artifactId>jersey-media-json-jackson</artifactId>
+        </dependency>
+
         <!-- H2 Database (Wajib ada agar Camunda tidak error transactionManager) -->
         <dependency>
             <groupId>com.h2database</groupId>

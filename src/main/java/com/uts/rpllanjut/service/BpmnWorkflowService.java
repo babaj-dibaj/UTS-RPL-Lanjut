@@ -10,6 +10,9 @@ import org.camunda.bpm.engine.history.HistoricVariableInstance;
 import org.camunda.bpm.engine.repository.ProcessDefinition;
 import org.camunda.bpm.engine.runtime.ProcessInstance;
 import org.camunda.bpm.engine.task.Task;
+import org.camunda.bpm.engine.IdentityService;
+import org.camunda.bpm.engine.identity.User;
+import jakarta.annotation.PostConstruct;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
@@ -26,15 +29,38 @@ public class BpmnWorkflowService {
     private final TaskService taskService;
     private final HistoryService historyService;
     private final RepositoryService repositoryService;
+    private final IdentityService identityService;
 
     public BpmnWorkflowService(RuntimeService runtimeService,
                                TaskService taskService,
                                HistoryService historyService,
-                               RepositoryService repositoryService) {
+                               RepositoryService repositoryService,
+                               IdentityService identityService) {
         this.runtimeService = runtimeService;
         this.taskService = taskService;
         this.historyService = historyService;
         this.repositoryService = repositoryService;
+        this.identityService = identityService;
+    }
+
+    @PostConstruct
+    public void initAdminUser() {
+        try {
+            identityService.unlockUser("admin");
+            User user = identityService.createUserQuery().userId("admin").singleResult();
+            if (user == null) {
+                user = identityService.newUser("admin");
+                user.setFirstName("Siti");
+                user.setLastName("Dibaj");
+                user.setEmail("sitidibaj117@mhs.uinjkt.ac.id");
+            }
+            user.setPassword("admin");
+            identityService.saveUser(user);
+            identityService.unlockUser("admin");
+            System.out.println(">>> Camunda Admin Initialized! checkPassword: " + identityService.checkPassword("admin", "admin"));
+        } catch (Exception e) {
+            System.err.println(">>> Error initAdminUser: " + e.getMessage());
+        }
     }
 
     // ==============================================================
