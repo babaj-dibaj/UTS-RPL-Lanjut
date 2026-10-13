@@ -150,7 +150,7 @@ Diagram BPMN terdiri atas:
 
 ### 5.1 Dokumentasi Repositori GitHub
 Proyek dikelola menggunakan Git Version Control System dan diunggah ke layanan GitHub.
-* Tautan Repositori: `https://github.com/USERNAME/uts-rpllanjut-sitidibaj-117`
+* Tautan Repositori: `https://github.com/babaj-dibaj/UTS-RPL-Lanjut`
 * Kolaborator/Reviewer: `rizalbroer@uinjkt.ac.id`
 
 ### 5.2 Kesimpulan

@@ -192,16 +192,17 @@ Untuk kelengkapan laporan, ambil tangkapan layar secara berurutan:
 
 ## 6. Soal 6: Penggunaan Tools GitHub dan Petunjuk Pengumpulan (Bobot 15%)
 
-### A. Inisialisasi dan Push ke GitHub
-Lakukan perintah berikut pada terminal di folder proyek:
+### A. Tautan Repositori Resmi GitHub
+* **URL Repositori GitHub:** [https://github.com/babaj-dibaj/UTS-RPL-Lanjut](https://github.com/babaj-dibaj/UTS-RPL-Lanjut)
+* **Clone URL:** `https://github.com/babaj-dibaj/UTS-RPL-Lanjut.git`
+* **Pemilik Repositori:** **Siti Dibaj Trikusuma** (`babaj-dibaj`)
+
+### B. Perintah Inisialisasi dan Push ke GitHub
 ```bash
-# 1. Pastikan commit lokal sudah rapi
-git status
+# 1. Tambahkan remote URL ke repository GitHub resmi
+git remote add origin https://github.com/babaj-dibaj/UTS-RPL-Lanjut.git
 
-# 2. Tambahkan remote URL ke akun GitHub Anda
-git remote add origin https://github.com/USERNAME-GITHUB-ANDA/uts-rpllanjut-sitidibaj-117.git
-
-# 3. Ganti nama branch utama ke main dan push
+# 2. Set branch utama ke main dan push seluruh kode
 git branch -M main
 git push -u origin main
 ```
