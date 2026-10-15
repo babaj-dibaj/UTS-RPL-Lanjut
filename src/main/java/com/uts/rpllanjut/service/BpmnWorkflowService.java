@@ -183,6 +183,7 @@ public class BpmnWorkflowService {
         vars.put("abstrak", abstrak != null && !abstrak.isBlank() ? abstrak : "Penelitian ini memodelkan dan mengimplementasikan workflow proposal skripsi menggunakan standar BPMN 2.0 dan framework Spring Boot.");
         vars.put("tanggalPengajuan", now);
         vars.put("statusAlur", "Tahap 1: Verifikasi Kelayakan (Sekretaris Prodi)");
+        vars.put("hasilVerifikasi", "MENUNGGU");
         vars.put("catatanSekretaris", "-");
         vars.put("catatanDosen", "-");
         vars.put("catatanKaprodi", "-");
@@ -247,8 +248,16 @@ public class BpmnWorkflowService {
         String timeNow = LocalDateTime.now().format(DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss"));
 
         if ("Task_Verifikasi".equals(task.getTaskDefinitionKey())) {
-            vars.put("catatanSekretaris", (catatan != null && !catatan.isBlank()) ? catatan : "Dokumen lengkap dan memenuhi syarat administratif.");
-            vars.put("statusAlur", "Tahap 2: Review Substansi (Dosen Pembimbing)");
+            boolean approved = !"REJECT".equalsIgnoreCase(action);
+            vars.put("hasilVerifikasi", approved ? "DISETUJUI" : "DITOLAK");
+            vars.put("catatanSekretaris", (catatan != null && !catatan.isBlank())
+                    ? catatan
+                    : approved
+                    ? "Dokumen lengkap dan memenuhi syarat administratif."
+                    : "Dokumen belum memenuhi syarat administratif.");
+            vars.put("statusAlur", approved
+                    ? "Tahap 2: Review Substansi (Dosen Pembimbing)"
+                    : "Selesai: Proposal perlu perbaikan");
         } else if ("Task_Review".equals(task.getTaskDefinitionKey())) {
             vars.put("catatanDosen", (catatan != null && !catatan.isBlank()) ? catatan : "Topik disetujui, siap membimbing skripsi mahasiswa.");
             vars.put("statusAlur", "Tahap 3: Persetujuan Akhir & SK (Ketua Prodi)");
